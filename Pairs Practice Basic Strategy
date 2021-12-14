@@ -33,6 +33,7 @@ def main():
 		'''Press enter to end the program!'''
 		enter_to_break = ""
 
+		'''Input to see if player is correct in basic strategy'''
 		print("Player: (" + player_hand_pair + ", " + player_hand_pair + ") vs Dealer: " + dealer_hand + ".")
 		choice = input("Hit/Stand/Double/Split: ")
 
