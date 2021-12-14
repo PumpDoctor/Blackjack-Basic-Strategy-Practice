@@ -51,7 +51,7 @@ def main():
 					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
 					count += 1
-					print("Wrong. Hit in this situation. Score: " + (score) + "/" + (count) + ".")
+					print("Wrong. Hit in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			elif y in {"5", "6"}:
 				if choice.lower() == "double":
 					count += 1
@@ -99,7 +99,7 @@ def main():
 					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
 					count += 1
-					print("Wrong. Double in this situation. Score: " + score + "/" + count + ".")
+					print("Wrong. Double in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			print("")
 			break
 
