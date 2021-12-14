@@ -1,18 +1,27 @@
+'''This program lets users practice basic strategy for blackjack soft totals'''
+'''Importing random library for random hands'''
 import random
 
+'''Main function'''
 def main():
 	count = 0
 	score = 0
 	while True:
+
+		'''Assigning arrays for the possible dealer and player hands'''
 		dealer_hands = ["A", "10", "J", "Q", "K", "2", "3", "4", "5", "6", "7", "8", "9"]
 		player_hands = ["2", "3", "4", "5", "6", "7", "8", "9"]
 		x = random.choice(player_hands)
 		y = random.choice(dealer_hands)
+
+		'''To end the program, hit enter!'''
 		enter_to_break = ""
 		
+		'''Input to see if player is correct in basic strategy'''
 		print("A, " + x + " vs " + y + "")
 		choice = input("Hit/Stand/Double: ")
 
+		'''While statements for all possible hands'''
 		while x == "2":
 			if y in {"2", "3", "4", "7", "8", "9", "10", "J", "Q", "K", "A"}:
 				if choice.lower() == "hit":
@@ -165,7 +174,10 @@ def main():
 					print("Wrong. Stand in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			print("")
 			break
+
+		'''If statement to end the program (hit enter)'''
 		if choice == enter_to_break:
 			break
 
+'''Calling the function'''
 main()
