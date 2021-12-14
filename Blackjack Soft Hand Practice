@@ -1,113 +1,161 @@
 import random
 
 def main():
+	count = 0
+	score = 0
 	while True:
 		dealer_hands = ["A", "10", "J", "Q", "K", "2", "3", "4", "5", "6", "7", "8", "9"]
 		player_hands = ["2", "3", "4", "5", "6", "7", "8", "9"]
 		x = random.choice(player_hands)
 		y = random.choice(dealer_hands)
 		enter_to_break = ""
-
+		
 		print("A, " + x + " vs " + y + "")
 		choice = input("Hit/Stand/Double: ")
 
 		while x == "2":
 			if y in {"2", "3", "4", "7", "8", "9", "10", "J", "Q", "K", "A"}:
-				if choice == "Hit":
-					print("Correct!")
+				if choice.lower() == "hit":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
+
 				else:
-					print("Wrong. Hit in this situation.")
+					count += 1
+					print("Wrong. Hit in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			elif y in {"5", "6"}:
-				if choice == "Double":
-					print("Correct!")
+				if choice.lower() == "double":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Double in this situation.")
+					count += 1
+					print("Wrong. Double in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			break
 
 		while x == "3": 
 			if y in {"2", "3", "4", "7", "8", "9", "10", "J", "Q", "K", "A"}:
-				if choice == "Hit":
-					print("Correct!")
+				if choice.lower() == "hit":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Hit in this situation.")
+					count += 1
+					print("Wrong. Hit in this situation. Score: " + (score) + "/" + (count) + ".")
 			elif y in {"5", "6"}:
-				if choice == "Double":
+				if choice.lower() == "double":
+					count += 1
+					score += 1
 					print("Correct!")
 				else:
-					print("Wrong. Double in this situation.")
+					count += 1
+					print("Wrong. Double in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			break
 
 		while x == "4":
 			if y in {"2", "3", "7", "8", "9", "10", "J", "Q", "K", "A"}:
-				if choice == "Hit":
-					print("Correct!")
+				if choice.lower() == "hit":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Hit in this situation.")
+					count += 1
+					print("Wrong. Hit in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			elif y in {"4", "5", "6"}:
-				if choice == "Double":
-					print("Correct!")
+				if choice.lower() == "double":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Double in this situation.")
+					count += 1
+					print("Wrong. Double in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			break
 
 		while x == "5":
 			if y in {"2", "3", "7", "8", "9", "10", "J", "Q", "K", "A"}:
-				if choice == "Hit":
-					print("Correct!")
+				if choice.lower() == "hit":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Hit in this situation.")
+					count += 1
+					print("Wrong. Hit in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			elif y in {"4", "5", "6"}:
-				if choice == "Double":
-					print("Correct!")
+				if choice.lower() == "double":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Double in this situation.")
+					count += 1
+					print("Wrong. Double in this situation. Score: " + score + "/" + count + ".")
 			break
 
 		while x == "6":
 			if y in {"2", "7", "8", "9", "10", "J", "Q", "K", "A"}:
-				if choice == "Hit":
-					print("Correct!")
+				if choice.lower() == "hit":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Hit in this situation.")
+					count += 1
+					print("Wrong. Hit in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			elif y in {"3", "4", "5", "6"}:
-				if choice == "Double":
-					print("Correct!")
+				if choice.lower() == "double":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Double in this situation.")
+					count += 1
+					print("Wrong. Double in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			break
 
 		while x == "7":
 			if y in {"2", "7", "8"}:
-				if choice == "Stand":
-					print("Correct!")
+				if choice.lower() == "stand":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Stand in this situation.")
+					count += 1
+					print("Wrong. Stand in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			elif y in {"9", "10", "J", "Q", "K", "A"}:
-				if choice == "Hit":
-					print("Correct!")
+				if choice.lower() == "hit":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Hit in this situation.")
+					count += 1
+					print("Wrong. Hit in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			elif y in {"3", "4", "5", "6"}:
-				if choice == "Double":
-					print("Correct!")
+				if choice.lower() == "double":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Double in this situation.")
+					count += 1
+					print("Wrong. Double in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			break
 
 		while x == "8":
 			if y in {"A", "10", "J", "Q", "K", "2", "3", "4", "5", "6", "7", "8", "9"}:
-				if choice == "Stand":
-					print("Correct!")
+				if choice.lower() == "stand":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Stand in this situation.")
+					count += 1
+					print("Wrong. Stand in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			break
 
 		while x == "9":
 			if y in {"A", "10", "J", "Q", "K", "2", "3", "4", "5", "6", "7", "8", "9"}:
-				if choice == "Stand":
-					print("Correct!")
+				if choice.lower() == "stand":
+					count += 1
+					score += 1
+					print("Correct! Score: " + str(score) + "/" + str(count) + ".")
 				else:
-					print("Wrong. Stand in this situation.")
+					count += 1
+					print("Wrong. Stand in this situation. Score: " + str(score) + "/" + str(count) + ".")
 			break
 		if choice == enter_to_break:
 			break
