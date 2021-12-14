@@ -21,7 +21,7 @@ def main():
 		print("A, " + x + " vs " + y + "")
 		choice = input("Hit/Stand/Double: ")
 
-		'''While statements for all possible hands'''
+		'''While loops for all possible hands'''
 		while x == "2":
 			if y in {"2", "3", "4", "7", "8", "9", "10", "J", "Q", "K", "A"}:
 				if choice.lower() == "hit":
