@@ -1,0 +1,258 @@
+'''This program lets users practice basic strategy for blackjack pairs'''
+'''Importing random library for random hands'''
+import random
+
+'''Main function'''
+def main():
+	count = 0
+	score = 0
+	while True:
+
+		'''Assigning arrays for all possible pairs against all possible dealer hands'''
+		hands = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+
+		split_two_three_seven = ["2", "3", "4", "5", "6", "7"]
+		hit_two_three_seven = ["8", "9", "10", "J", "Q", "K", "A"]
+
+		split_four = ["5", "6"]
+		hit_four = ["2", "3", "4", "7", "8", "9", "10", "J", "Q", "K", "A"]
+
+		double_five = ["2", "3", "4", "5", "6", "7", "8", "9"]
+		hit_five = ["10", "J", "Q", "K", "A"]
+
+		split_six = ["2", "3", "4", "5", "6"]
+		hit_six = ["7", "8", "9", "10", "J", "Q", "K", "A"]
+
+		split_nine = ["2", "3", "4", "5", "6", "8", "9"]
+		stand_nine = ["7", "10", "J", "Q", "K", "A"]
+
+
+		player_hand_pair = random.choice(hands)
+		dealer_hand = random.choice(hands)
+
+		'''Press enter to end the program!'''
+		enter_to_break = ""
+
+		print("Player: (" + player_hand_pair + ", " + player_hand_pair + ") vs Dealer: " + dealer_hand + ".")
+		choice = input("Hit/Stand/Double/Split: ")
+
+		'''While loops for all possible hands'''
+		while player_hand_pair == "2":
+			if dealer_hand in split_two_three_seven:
+				if choice.lower() == "split":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Split in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			elif dealer_hand in hit_two_three_seven:
+				if choice.lower() == "hit":
+					count += 1
+					score =+ 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Hit in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		while player_hand_pair == "3":
+			if dealer_hand in split_two_three_seven:
+				if choice.lower() == "split":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Split in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			elif dealer_hand in hit_two_three_seven:
+				if choice.lower() == "hit":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Hit in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		while player_hand_pair == "4":
+			if dealer_hand in split_four:
+				if choice.lower() == "split":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Split in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			elif dealer_hand in hit_four:
+				if choice.lower() == "hit":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Hit in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		while player_hand_pair == "5":
+			if dealer_hand in double_five:
+				if choice.lower() == "double":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Double in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			elif dealer_hand in hit_five:
+				if choice.lower() == "hit":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Hit in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		while player_hand_pair == "6":
+			if dealer_hand in split_six:
+				if choice.lower() == "split":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Split in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			elif dealer_hand in hit_six:
+				if choice.lower() == "hit":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Hit in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		while player_hand_pair == "7":
+			if dealer_hand in split_two_three_seven:
+				if choice.lower() == "split":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Split in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			elif dealer_hand in hit_two_three_seven:
+				if choice.lower() == "hit":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Hit in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		while player_hand_pair == "8":
+			if dealer_hand in hands:
+				if choice.lower() == "split":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Split in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break
+
+		while player_hand_pair == "9":
+			if dealer_hand in split_nine:
+				if choice.lower() == "split":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Split in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			elif dealer_hand in stand_nine:
+				if choice.lower() == "stand":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Stand in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		while player_hand_pair == "10":
+			if dealer_hand in hands:
+				if choice.lower() == "stand":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Stand in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		while player_hand_pair == "J":
+			if dealer_hand in hands:
+				if choice.lower() == "stand":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Stand in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		while player_hand_pair == "Q":
+			if dealer_hand in hands:
+				if choice.lower() == "stand":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Stand in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		while player_hand_pair == "K":
+			if dealer_hand in hands:
+				if choice.lower() == "stand":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Stand in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		while player_hand_pair == "A":
+			if dealer_hand in hands:
+				if choice.lower() == "split":
+					count += 1
+					score += 1
+					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
+				else:
+					count += 1
+					print("Wrong. Split in this situation. Score:" + str(score) + "/" + str(count) + ".")
+			print("")
+			break 
+
+		'''If statement to end the program (hit enter)'''
+		if choice == enter_to_break:
+			print("Quitting program.")
+			break 
+
+'''Calling the function'''
+main()
