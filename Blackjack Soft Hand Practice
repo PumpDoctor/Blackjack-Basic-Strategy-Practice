@@ -18,7 +18,7 @@ def main():
 		enter_to_break = ""
 		
 		'''Input to see if player is correct in basic strategy'''
-		print("A, " + x + " vs " + y + "")
+		print("Player: A, " + x + " vs Dealer: " + y + "")
 		choice = input("Hit/Stand/Double: ")
 
 		'''While loops for all possible hands'''
