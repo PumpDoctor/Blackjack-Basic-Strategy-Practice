@@ -50,7 +50,7 @@ def main():
 			elif dealer_hand in hit_two_three_seven:
 				if choice.lower() == "hit":
 					count += 1
-					score =+ 1
+					score += 1
 					print("Correct! Score:" + str(score) + "/" + str(count) + ".")
 				else:
 					count += 1
